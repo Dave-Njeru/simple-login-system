@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -13,8 +13,12 @@
         <h2>Registration Form</h2>
         <form action="registration.php" method="post">
 
-            <label for="firstName">First Name:</label><input type="text" name="firstName" id="firstName"><br>
-            <label for="lastName">Last Name:</label><input type="text" name="lastName" id="lastName" required><br>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,32}" placeholder="First Name"
+                title="Only alphabet letters are allowed" required><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" pattern="[A-Za-z]{1,32}" placeholder="Last Name"
+                title="Only alphabet letters are allowed" required><br>
             <label for="userAccount">User Account:</label> <select name="accountType" id="userAccount">
                 <option value=""></option>
                 <option value="student">Student</option>
