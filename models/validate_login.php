@@ -1,13 +1,14 @@
 <?php
-require 'connection.php';
-require 'clean_data.php';
-require 'redirect.php';
+require '../helpers/connection.php';
+require '../helpers/clean_data.php';
+require '../helpers/redirect.php';
 
-$username = $password = "";
+$username = $password = $userAccount = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = test_input($_POST['username']);
     $password = test_input($_POST['password']);
+    $userAccount = test_input($_POST['userAccount']);
 }
 
 $sql = "SELECT * FROM login WHERE username = ?";
@@ -21,7 +22,7 @@ if ($stmt = $conn->prepare($sql)) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         // Check password against stored hash
-        if (password_verify($password, $row['password'])) {
+        if (password_verify($password, $row['password']) && $userAccount == $row['accountType']) {
             redirect('homepage.html');
         } else {
             echo "Invalid username or password.";
