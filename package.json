@@ -1,0 +1,15 @@
+{
+  "name": "simple-login-system",
+  "version": "1.0.0",
+  "description": "Simple login system with PHP and MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
