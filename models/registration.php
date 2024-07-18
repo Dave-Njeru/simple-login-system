@@ -1,6 +1,7 @@
 <?php
-require 'connection.php';
-require 'clean_data.php';
+require '../helpers/connection.php';
+require '../helpers/clean_data.php';
+require '../helpers/redirect.php';
 
 $firstName = $lastName = $accountType = $username = $hashedPassword = $password = "";
 
@@ -22,7 +23,7 @@ if ($stmt = $conn->prepare($sql)) {
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
-        echo "Registration Successful";
+        redirect('../views/login.html');
     } else {
         echo "An error occurred during registration. ".$conn->error;
     }

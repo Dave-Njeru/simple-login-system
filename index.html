@@ -11,7 +11,7 @@
 <body>
     <main>
         <h2>Registration Form</h2>
-        <form action="registration.php" method="post">
+        <form action="models/registration.php" method="post" id="registrationForm">
 
             <label for="firstName">First Name:</label>
             <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,32}" placeholder="First Name"
@@ -20,7 +20,6 @@
             <input type="text" name="lastName" id="lastName" pattern="[A-Za-z]{1,32}" placeholder="Last Name"
                 title="Only alphabet letters are allowed" required><br>
             <label for="userAccount">User Account:</label> <select name="accountType" id="userAccount">
-                <option value=""></option>
                 <option value="student">Student</option>
                 <option value="lecturer">Lecturer</option>
                 <option value="admin">Admin</option>
@@ -28,12 +27,13 @@
             <label for="username">Username: </label><input type="email" name="username" id="username"
                 placeholder="example@xyz.com" required><br>
             <label for="password">Password: </label><input type="password" name="password" id="password" maxlength="12"
-                autocomplete="new-password"><br>
+                autocomplete="new-password" required><br>
             Already registered?<a href="login.html">Sign in</a> <br> <br>
             <input type="submit">
             <input type="reset">
         </form>
     </main>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
