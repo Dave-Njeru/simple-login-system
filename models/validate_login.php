@@ -8,7 +8,7 @@ $username = $password = $userAccount = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = test_input($_POST['username']);
     $password = test_input($_POST['password']);
-    $userAccount = test_input($_POST['userAccount']);
+    $userAccount = test_input($_POST['accountType']);
 }
 
 $sql = "SELECT * FROM login WHERE username = ?";
@@ -23,7 +23,7 @@ if ($stmt = $conn->prepare($sql)) {
         $row = $result->fetch_assoc();
         // Check password against stored hash
         if (password_verify($password, $row['password']) && $userAccount == $row['accountType']) {
-            redirect('homepage.html');
+            redirect('../views/homepage.html');
         } else {
             echo "Invalid username or password.";
         }
