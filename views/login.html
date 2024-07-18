@@ -8,15 +8,24 @@
 <body>
     <main>
         <h2>Login Form</h2>
-        <form action="validate_login.php" method="post">
+        <form action="../models/validate_login.php" method="post">
             <div>
-                <label for="username">Username:</label><input type="text" name="username" id="username" required><br>
+                <label for="username">Username:</label><input type="text" name="username" id="username" required>
             </div>
             <div>
-                <label for="password">Password:</label><input type="password" name="password" id="username" required><br>
+                <label for="password">Password:</label><input type="password" name="password" id="username" required>
             </div>
-            <input type="submit">
-            <input type="reset">
+            <div>
+                <label for="userAccount">User Account:</label> <select name="accountType" id="userAccount">
+                    <option value="student">Student</option>
+                    <option value="lecturer">Lecturer</option>
+                    <option value="admin">Admin</option>
+                </select><br>
+            </div>
+            <div>
+                <input type="submit">
+                <input type="reset">
+            </div>
         </form>
     </main>   
 </body>
