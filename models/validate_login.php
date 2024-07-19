@@ -3,6 +3,8 @@ require '../helpers/connection.php';
 require '../helpers/clean_data.php';
 require '../helpers/redirect.php';
 
+session_start();
+
 $username = $password = $userAccount = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -23,7 +25,10 @@ if ($stmt = $conn->prepare($sql)) {
         $row = $result->fetch_assoc();
         // Check password against stored hash
         if (password_verify($password, $row['password']) && $userAccount == $row['accountType']) {
-            redirect('../views/homepage.html');
+            $_SESSION['firstName'] = $row['firstName'];
+            $_SESSION['accountType'] = $row['accountType'];
+            $_SESSION['logged_in'] = true;
+            redirect('../helpers/session.php');
         } else {
             echo "Invalid username or password.";
         }
