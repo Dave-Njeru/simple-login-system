@@ -20,17 +20,3 @@ emailInput.addEventListener('blur', function() {
         emailInput.setCustomValidity('');
     }
 });
-
-//function to confirm atleat one user account type is select on form submission
-const form = document.getElementById("registrationForm");
-
-form.addEventListener('submit', function(event) {
-    const option = document.getElementById("userAccount").value;
-
-    if(option == '') {
-        alert("There is an error");
-        emailInput.classList.add('error'); // Add error class for styling
-        emailInput.setCustomValidity('Please enter a valid Gmail, Outlook, or Yahoo email address.');
-
-    }
-});
