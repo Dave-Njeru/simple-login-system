@@ -8,9 +8,9 @@ if (isset($_SESSION['logged_in'])) {
     $accountType = $_SESSION['accountType'];
 
     //define page URLs based on account type
-    $adminPage = "";
-    $studentPage = "../views/homepage.html";
-    $lecturerPage = "";
+    $adminPage = "../views/admin.php";
+    $studentPage = "../views/student.php";
+    $lecturerPage = "../views/lecturer.php";
 
     //redirect based on account type
     switch ($accountType) {
