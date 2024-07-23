@@ -19,7 +19,7 @@
                 <img src="pictures/lion-309219_1920.png" alt="school logo" class="img-fluid" width="20%">
             </div>
             <div class="col-8 text-center">
-                <div class="title">Lions Club School System</div>
+                <div class="title">LIONS CLUB UNIVERSITY</div>
             </div>
         </div>
     </header>
