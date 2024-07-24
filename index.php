@@ -5,83 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d0bdada029.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="container">
-    <header>
-        <div class="row">
-            <div class="col-4">
-                <img src="pictures/lion-309219_1920.png" alt="school logo" class="img-fluid" width="20%">
-            </div>
-            <div class="col-8 text-center">
-                <div class="title">LIONS CLUB UNIVERSITY</div>
-            </div>
-        </div>
-    </header>
-
+    <?php require 'helpers/header.php'; ?>
     <main>
         <div class="row">
-            <h2>Registration Form</h2>
-            <form action="models/registration.php" method="post" id="registrationForm">
+            <h4>Registration</h4>
+            <form action="models/registration.php" method="post">
                 <div>
-                    <label for="firstName">First Name:</label><br>
-                    <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,32}" placeholder="First Name"
-                        title="Only alphabet letters are allowed" required><br>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,32}" placeholder="First Name" title="Only alphabet letters are allowed" required><br>
                 </div>
                 <div>
-                    <label for="lastName">Last Name:</label><br>
-                    <input type="text" name="lastName" id="lastName" pattern="[A-Za-z]{1,32}" placeholder="Last Name"
-                        title="Only alphabet letters are allowed" required><br>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName" pattern="[A-Za-z]{1,32}" placeholder="Last Name" title="Only alphabet letters are allowed" required><br>
                 </div>
                 <div>
-                    <label for="userAccount">User Account:</label><br> <select name="accountType" id="userAccount">
+                    <label for="username">Username:</label>
+                    <input type="email" name="username" id="username" placeholder="example@xyz.com" required><br>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" maxlength="12" autocomplete="new-password" required><br>
+                </div>
+                <div>
+                    <label for="userAccount">User Account:</label> <select name="accountType" id="userAccount">
                         <option value="student">Student</option>
                         <option value="lecturer">Lecturer</option>
                         <option value="admin">Admin</option>
                     </select><br>
                 </div>
                 <div>
-                    <label for="username">Username: </label><br>
-                    <input type="email" name="username" id="username" placeholder="example@xyz.com" required><br>
-                </div>
-                <div>
-                    <label for="password">Password: </label><br>
-                    <input type="password" name="password" id="password" maxlength="12" autocomplete="new-password" required><br>
-                </div>
-                <div>
-                    Already registered?<a href="views/login.html">Sign in</a>
+                    Already registered?<a href="views/login.php">Sign in</a>
                 </div>
                 <div class="buttons">
-                    <button type="submit" class="btn btn-success">Submit</button>
-                    <button type="reset" class="btn btn-danger">Reset</button>
+                    <button type="submit" class="btn btn-success">SIGN UP</button>
+                    <button type="reset" class="btn btn-danger">RESET</button>
                 </div>
             </form>
         </div>
     </main>
-
-    <footer>
-        <div class="row">
-            <div class="col-6">
-                <span>© 2024 Lions Club, Sch. All rights reserved.</span>
-            </div>
-            <div class="col-6">
-                <ul>
-                    <li><i class='fab fa-facebook-f'></i></li>
-                    <li><i class='fab fa-instagram'></i></li>
-                    <li><i class='fab fa-twitter'></i></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <?php require 'helpers/footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 
