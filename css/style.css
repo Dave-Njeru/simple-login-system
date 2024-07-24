@@ -5,8 +5,11 @@
     font-family: 'Poppins';
 }
 
+html, body {
+    height: 100vh;
+}
+
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -18,11 +21,14 @@ label {
 }
 
 form {
-    background-color: #F0F8FF;
-    border-radius: 2%;
-    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    background-color: #F0F8FF;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 div.buttons {
@@ -45,9 +51,8 @@ header div {
 }
 
 div.title {
-    font-size: 40px;
+    font-size: 30px;
     color: white;
-    font-family: Great Vibes;
 }
 
 footer {
