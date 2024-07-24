@@ -30,7 +30,7 @@ if ($stmt = $conn->prepare($sql)) {
             $_SESSION['logged_in'] = true;
             redirect('../helpers/session.php');
         } else {
-            echo "Invalid username or password.";
+            echo "Invalid credentials. Please try again";
         }
     } else {
         echo "Username not found.";
