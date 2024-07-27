@@ -8,7 +8,7 @@ session_start();
 $username = $password = $userAccount = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = test_input($_POST['username']);
+    $username = test_input($_POST['email']);
     $password = test_input($_POST['password']);
     $userAccount = test_input($_POST['accountType']);
 }

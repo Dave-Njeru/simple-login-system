@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $firstName = test_input($_POST['firstName']);
     $lastName = test_input($_POST['lastName']);
     $accountType = test_input($_POST['accountType']);
-    $username = test_input($_POST['username']);
+    $username = test_input($_POST['email']);
     $password = test_input($_POST['password']);
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
