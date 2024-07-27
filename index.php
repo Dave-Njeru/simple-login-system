@@ -14,39 +14,40 @@
     <?php require 'helpers/header.php'; ?>
     <main>
         <div class="row">
-            <h4>Registration</h4>
+            <h4>Registration</h4> <hr>
             <form action="models/registration.php" method="post">
-                <div>
-                    <label for="firstName">First Name:</label>
-                    <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,32}" placeholder="First Name" title="Only alphabet letters are allowed" required><br>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name:</label>
+                    <input type="text" name="firstName" class="form-control" id="firstName" pattern="[A-Za-z]{1,32}" placeholder="First Name" title="Only alphabet letters are allowed" required>
                 </div>
-                <div>
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" name="lastName" id="lastName" pattern="[A-Za-z]{1,32}" placeholder="Last Name" title="Only alphabet letters are allowed" required><br>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name:</label>
+                    <input type="text" name="lastName" class="form-control" id="lastName" pattern="[A-Za-z]{1,32}" placeholder="Last Name" title="Only alphabet letters are allowed" required>
                 </div>
-                <div>
-                    <label for="username">Username:</label>
-                    <input type="email" name="username" id="username" placeholder="example@xyz.com" required><br>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="example@xyz.com" required>
                 </div>
-                <div>
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" maxlength="12" autocomplete="new-password" required><br>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" name="password" class="form-control" id="password" maxlength="12" placeholder="Enter password" autocomplete="new-password" required>
                 </div>
-                <div>
-                    <label for="userAccount">User Account:</label> <select name="accountType" id="userAccount">
+                <div class="mb-3">
+                    <label for="userAccount" class="form-label">User Account:</label> <select name="accountType" class="form-select" id="userAccount">
                         <option value="student">Student</option>
                         <option value="lecturer">Lecturer</option>
                         <option value="admin">Admin</option>
-                    </select><br>
+                    </select>
                 </div>
-                <div>
+                <div class="mb-3" >
                     Already registered?<a href="views/login.php">Sign in</a>
                 </div>
-                <div class="buttons">
+                <div class="mb-3">
                     <button type="submit" class="btn btn-success">SIGN UP</button>
                     <button type="reset" class="btn btn-danger">RESET</button>
                 </div>
             </form>
+            <hr>
         </div>
     </main>
     <?php require 'helpers/footer.php'; ?>
