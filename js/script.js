@@ -6,7 +6,7 @@ function validateEmail(email) {
 }
 
 // Get the email input element
-const emailInput = document.getElementById('username');
+const emailInput = document.getElementById('email');
 
 // Add event listener for 'blur' event
 emailInput.addEventListener('blur', function() {
