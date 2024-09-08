@@ -1,2 +1,6 @@
 # simple-login-system
 Simple login system with PHP and MySQL
+
+This project, developed as part of the Internet Programming unit at Mount Kenya University, demonstrates a practical application of web development skills in the computer science curriculum. The project's core is a simple yet functional login system implemented using PHP and MySQL, showcasing the integration of server-side scripting with database management. The system features a registration page where new users can create accounts, laying the foundation for a secure and personalized user experience.
+
+The login page serves as the gateway to the system, incorporating a key feature that requires users to specify their occupation and choose between student, lecturer, or admin roles. This role-based authentication mechanism adds a layer of complexity to the project, demonstrating an understanding of user access control in web applications. Upon successful authentication, the system leverages conditional logic to direct users to role-specific pages, tailoring the user experience based on their occupation. This dynamic routing showcases the project's ability to handle different user types and provide customized content, a crucial aspect of many real-world web applications.
